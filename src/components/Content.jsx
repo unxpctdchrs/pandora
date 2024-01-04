@@ -31,11 +31,11 @@ const Content = () =>{
         return animeList.map((anime, i) =>{
             return(
                 <div className="content-wrapper" key={i}>
-                    <Card className="w-48">
+                    <Card className="w-48 h-full">
                         <CardHeader floated={false} className="h-50">
                             <img 
                                 src={anime.images.jpg.image_url} 
-                                className='h-full w-fit object-center select-none'
+                                className='h-56 w-full object-center select-none'
                                 />
                         </CardHeader>
                         <CardBody className="text-center">
