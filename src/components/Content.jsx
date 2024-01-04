@@ -1,7 +1,8 @@
 import '../styles/Content.css'
 import { getTopAnimeList } from '../apiManager';
 import { useEffect, useState } from 'react';
-import { Card, CardHeader, CardBody, Typography, Button } from "@material-tailwind/react";
+import { Card, CardHeader, CardBody, Typography } from "@material-tailwind/react";
+import { Link } from 'react-scroll'
 
 const Content = () =>{
     const [animeList, setAnimeList] = useState([])
@@ -18,7 +19,12 @@ const Content = () =>{
     }
     
     const decrementPage = () => {
-        setPage(page - 1)
+        if(page <= 1){
+            setPage(1)
+        }
+        if(page >1){
+            setPage(page - 1)
+        }
     }
 
     const TopAnimeList = () =>{
@@ -36,6 +42,9 @@ const Content = () =>{
                             <Typography variant="h5" color="blue-gray" className="mb-0 text-sm select-none">
                             {anime.title}
                             </Typography>
+                            <Typography variant="h5" color="blue-gray" className="mb-0 text-sm select-none">
+                            {anime.score}
+                            </Typography>
                         </CardBody>    
                     </Card>
                 </div>
@@ -47,13 +56,25 @@ const Content = () =>{
     console.log(page)
 
     return(
-        <div className='content-container'>
-           <TopAnimeList />
-            <div className="buttons">
-                <Button onClick={decrementPage}>Previous page</Button>
-                <Button onClick={incrementPage}>Next page</Button>
+        <section>
+            <div className='content-container' id='content'>
+            <TopAnimeList />
             </div>
-        </div>
+            <div className="buttons-container">
+                <Link
+                    onClick={decrementPage}
+                    to="content"
+                    smooth={true}
+                    className='button'
+                    >Previous page</Link>
+                <Link 
+                    onClick={incrementPage}
+                    to="content"
+                    smooth={true}
+                    className='button'
+                >Next page</Link>
+            </div>
+        </section>
     )
 }
 
