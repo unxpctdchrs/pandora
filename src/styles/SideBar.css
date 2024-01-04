@@ -1,0 +1,53 @@
+:root{
+    --royalblue : #003566;
+}
+
+.sidebar-container{
+    background-color: var(--royalblue);
+    width: 15vw;
+    height: 100vh;
+    z-index: 1;
+    position: fixed;
+    color: whitesmoke;
+    /* border: 1px solid red; */
+}
+
+.sidebar-wrapper{
+    display: flex;
+    margin: 20px;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid blueviolet; */
+}
+
+.logo{
+    width: 60%;
+    border: 1px solid red;
+}
+
+hr{
+    width: 8vw;
+    height: 1px;
+    margin: auto;
+    color: whitesmoke;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar-navigation{
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 50px;
+    color: black;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.home, .animes{
+    background-color: antiquewhite;
+
+}
