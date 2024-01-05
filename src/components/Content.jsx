@@ -4,12 +4,12 @@ import { useEffect, useState } from 'react';
 import { Card, CardHeader, CardBody, Typography } from "@material-tailwind/react";
 import { Link } from 'react-scroll'
 
-const Content = () =>{
+const Content = (props) =>{
     const [animeList, setAnimeList] = useState([])
     const [page, setPage] = useState(1)
     
     useEffect(()=>{
-        getTopAnimeList(page).then((result) =>{
+        getTopAnimeList(page, props.limit).then((result) =>{
             setAnimeList(result)
         })
     }, [page])
@@ -52,15 +52,16 @@ const Content = () =>{
         })
     }
 
-    // console.log({animeList})
-    console.log(page)
+    console.log({animeList})
+    // console.log(page)
 
     return(
         <section>
+            <h1 className='topanime'>Top Anime</h1>
             <div className='content-container' id='content'>
-            <TopAnimeList />
+                <TopAnimeList />
             </div>
-            <div className="buttons-container">
+            <div className={`${props.show} buttons-container`}>
                 <Link
                     onClick={decrementPage}
                     to="content"

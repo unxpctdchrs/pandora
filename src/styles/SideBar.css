@@ -9,6 +9,7 @@
     z-index: 1;
     position: fixed;
     color: whitesmoke;
+    margin: 0;
     /* border: 1px solid red; */
 }
 

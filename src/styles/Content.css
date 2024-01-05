@@ -1,15 +1,22 @@
+.topanime{
+    margin-left: 20vw;
+    margin-top: 8vh;
+    color: whitesmoke;
+}
+
 .content-container{
-    color: white;
+    color: whitesmoke;
     margin-left: 20vw;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    margin-top: 10vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
 
 .buttons-container{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     color: black;
     margin-left: 20vw;
     gap: 20px;
