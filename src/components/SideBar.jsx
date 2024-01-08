@@ -2,7 +2,7 @@ import '../styles/SideBar.css'
 import logo from '../assets/pandora-logo.svg'
 import { NavLink } from 'react-router-dom'
 
-const SideBar = () =>{
+const SideBar = (props) =>{
     return(
         <div className="sidebar-container">
             <div className="sidebar-wrapper">
@@ -10,10 +10,10 @@ const SideBar = () =>{
                 <hr></hr>
                 <div className="sidebar-navigation">
                     <NavLink to='/'>
-                        <div className="home">Home</div>
+                        <div className={`${props.home_active} home hover:bg-white hover:text-black`}>Home</div>
                     </NavLink>
                     <NavLink to='/animes'>
-                        <div className="animes">Animes</div>
+                        <div className={`${props.animes_active} animes hover:bg-white hover:text-black`}>Animes</div>
                     </NavLink>
                 </div>
                 <hr></hr>

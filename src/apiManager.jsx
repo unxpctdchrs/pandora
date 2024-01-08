@@ -6,3 +6,13 @@ export const getTopAnimeList = async(page, limit = 25)=>{
     const anime = await axios.get(`${Url}/top/anime?page=${page}&limit=${limit}`)
     return anime.data.data
 }
+
+export const getAnimePictures = async() =>{
+    const aPic = await axios.get(`${Url}/anime/${23}/pictures`)
+    return aPic.data
+}
+
+export const getAnimeById = async(id) =>{
+    const animId = await axios.get(`${Url}/anime/${id}`)
+    return animId.data
+}

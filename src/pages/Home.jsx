@@ -6,7 +6,7 @@ import Content from '../components/Content'
 const Home = () =>{
     return(
         <div className="home-container" id='/'>
-            <SideBar />
+            <SideBar home_active="bg-white text-black"/>
             <Crsl />
             <Content limit={7} show="hidden"/>
         </div>

@@ -18,11 +18,15 @@
     display: flex;
     justify-content: flex-end;
     color: black;
-    margin-left: 20vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-right: 5vw;
     gap: 20px;
 }
 
 .button{
-    background-color: antiquewhite;
+    background-color: whitesmoke;
     cursor: pointer;
+    padding: 10px;
+    border-radius: 25px;
 }
