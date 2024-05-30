@@ -4,3 +4,12 @@
     height: 60vh;
     width: 74vw;
 }
+
+@media only screen and (max-width:430px){
+    .crsl{
+        margin-top: 10vh;
+        margin-left: 0;
+        width: 100%;
+        height: 26svh;
+    }   
+}

@@ -61,3 +61,47 @@ hr{
     padding-right: 50px;
     border-radius: 12px;
 }
+
+@media only screen and (max-width:430px){
+    .sidebar-container{
+        height: 10vh;
+        width: 100%;
+        /* border: 1px solid red; */
+    }
+    .sidebar-wrapper{
+        margin: 0;
+        flex-direction: row;
+        height: inherit;
+        /* border: 1px solid yellowgreen; */
+    }
+    
+    .logo{
+        margin: 0;
+        width: 25%;
+        height: 100%;
+    }
+    
+    hr{
+        display: none;
+    }
+
+    .sidebar-navigation{
+        flex-direction: row;
+        padding: 0;
+        gap: 20px;
+    }
+
+    .home, .animes{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width:375px){
+    .sidebar-navigation{
+        gap: 8px;
+    }
+
+    .home, .animes{
+        font-size: 12px;
+    }
+}

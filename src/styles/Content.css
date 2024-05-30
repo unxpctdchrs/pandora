@@ -14,6 +14,11 @@
     margin-bottom: 2vh;
 }
 
+.cardd{
+    width: 10vw;
+    height: 100%;
+}
+
 .buttons-container{
     display: flex;
     justify-content: flex-end;
@@ -29,4 +34,65 @@
     cursor: pointer;
     padding: 10px;
     border-radius: 25px;
+}
+
+@media only screen and (max-width: 430px){
+    .topanime{
+        margin-left: 5vw;
+        margin-top: 15vh;
+    }
+
+    .content-container{
+        margin-left: 4vw;
+        gap: 10px;
+    }
+
+    .cardd{
+        height: 100%;
+        width: 45vw;
+    }   
+}
+
+@media only screen and (max-width:412px){
+    .topanime{
+        margin-left: 5vw;
+        margin-top: 15vh;
+    }
+
+    .content-container{
+        margin-left: 4vw;
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width:390px){
+    .topanime{
+        margin-left: 5vw;
+        margin-top: 15vh;
+    }
+    
+    .content-container{
+        margin-left: 4vw;
+    }
+
+    .cardd{
+        height: 100%;
+        width: 45vw;
+    }
+}
+
+@media only screen and (max-width:375px){
+    .topanime{
+        margin-left: 5vw;
+        margin-top: 15vh;
+    }
+
+    .content-container{
+        margin-left: 4vw;
+        gap: 10px;
+    }
+
+    .cardd{
+        height: 100%;
+    }
 }

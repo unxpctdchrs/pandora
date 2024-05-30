@@ -13,6 +13,7 @@ const App =() => {
           <Route path='/' element={<Home />}/>
           <Route path='/animes' element={<Animes/>}/>
           <Route path='/anime/:animeId' element={<AnimeDetail/>}/>
+          <Route path="*" element={<Error/>}/>
         </Routes>
       </Router>
     </>

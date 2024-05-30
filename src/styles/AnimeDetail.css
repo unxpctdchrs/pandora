@@ -3,3 +3,9 @@
     margin-top: 8vh;
     color: whitesmoke;
 }
+
+@media only screen and (max-width:430px){
+    .anime-details-wrapper{
+        margin-top: 20vh;
+    }
+}

@@ -3,6 +3,7 @@ import { getAnimeById } from '../apiManager';
 import { useParams } from 'react-router-dom';
 import '../styles/AnimeDetail.css'
 import SideBar from '../components/SideBar';
+import { Spinner } from "@material-tailwind/react";
 
 export const AnimeDetail = () => {
     const { animeId } = useParams()
@@ -20,10 +21,11 @@ export const AnimeDetail = () => {
     if(anime.data == undefined){
         return(
             <div className="anime-details-wrapper">
-                <h1>loading</h1>
+                <Spinner color="white" />
             </div>
         )
     }
+    
     return (
         
         <div className="home-container">

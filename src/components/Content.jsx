@@ -28,11 +28,13 @@ const Content = (props) =>{
         }
     }
 
+    // console.log({animeList})
+
     const TopAnimeList = () =>{
         return animeList.map((anime, i) =>{
             return(
                 <div className="content-wrapper" key={i}>
-                    <Card className="w-48 h-full">
+                    <Card className="cardd">
                         <CardHeader floated={false} className="h-50">
                             <NavLink to={`/anime/${anime.mal_id}`}>
                                 <img 
@@ -71,7 +73,7 @@ const Content = (props) =>{
                     smooth={true}
                     duration={500}
                     offset={-200}
-                    className='button hover:bg-gray-500 hover:text-white'
+                    className='button hover:bg-gray-500 hover:text-white select-none'
                     >Previous page</Link>
                 <Link 
                     onClick={incrementPage}
@@ -79,7 +81,7 @@ const Content = (props) =>{
                     smooth={true}
                     duration={500}
                     offset={-200}
-                    className='button hover:bg-gray-500 hover:text-white'
+                    className='button hover:bg-gray-500 hover:text-white select-none'
                 >Next page</Link>
             </div>
         </section>
